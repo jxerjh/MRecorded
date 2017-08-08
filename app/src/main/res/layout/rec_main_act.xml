@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mvideo.record.FocusSurfaceView
+        android:id="@+id/sv_ffmpeg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:id="@+id/vv_play_backly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+        <com.mvideo.record.RecVideoView
+            android:id="@+id/vv_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/change_camera"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/btn_qupai_camera_switch_facing" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/common_video_interface_back"/>
+        <ImageView
+            android:id="@+id/iv_finish"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_video_interface_countersign"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_bottom2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="60dp"
+            android:src="@mipmap/common_video_interface_back"/>
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="60dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/common_video_interface_countersign"/>
+    </RelativeLayout>
+    <com.mvideo.record.RecButton
+        android:id="@+id/rb_start"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长按录制, 抬起暂停"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
