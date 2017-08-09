@@ -37,14 +37,10 @@ import java.util.List;
 public abstract class MediaRecorderBase implements Callback, PreviewCallback, IMediaRecorder {
 
 	/** 视频宽度 */
-	public static int VIDEO_WIDTH = 1280;//1280
+	public static int VIDEO_WIDTH = 960;//1280
 	/** 视频高度 */
-	public static int VIDEO_HEIGHT = 720;//720
+	public static int VIDEO_HEIGHT = 540;//720
 
-	/** 视频宽度 */
-	public static int PREVIEW_VIDEO_WIDTH = 960;
-	/** 视频高度 */
-	public static int PREVIEW_VIDEO_HEIGHT = 540;
 	/** 未知错误 */
 	public static final int MEDIA_ERROR_UNKNOWN = 1;
 	/** 预览画布设置错误 */
@@ -479,7 +475,7 @@ public abstract class MediaRecorderBase implements Callback, PreviewCallback, IM
 		 */
 		/**解决方式，计算预览尺寸值 解决bug：*/
 		List<Size> sizes = mParameters.getSupportedPreviewSizes();
-		Size optimalSize = getOptimalPreviewSize(sizes, PREVIEW_VIDEO_WIDTH, PREVIEW_VIDEO_HEIGHT);
+		Size optimalSize = getOptimalPreviewSize(sizes, VIDEO_WIDTH, VIDEO_HEIGHT);
 		MediaRecorderBase.VIDEO_WIDTH = optimalSize.width;
 		MediaRecorderBase.VIDEO_HEIGHT = optimalSize.height;
 		mParameters.setPreviewSize(optimalSize.width, optimalSize.height);
